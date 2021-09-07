@@ -1,6 +1,18 @@
 .footer__wrapper {
   position: relative;
 }
+.footer .text span {
+  color: var(--sub-text-color);
+}
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__right .footer__link {
+  display: inline-block;
+  margin-left: 0;
+}
 .footer {
   padding: 3rem  0;
 }
@@ -21,10 +33,17 @@
   font-size: 1.3rem;
   color: var(--sub-text-color);
 }
-.footer__link-span {
+.footer__link {
   position: relative;
-  color: inherit;
+  color: var(--main-text-color);
   margin-left: 1rem;
+}
+.footer .footer__link {
+  color: var(--sub-text-color);
+}
+.footer__link-span {
+  font-size: inherit;
+  color: inherit;
 }
 .footer__text {
   display: flex;
@@ -65,8 +84,8 @@
 
   /* FOOTER LINK ON HOVER */
 
-  .footer__link-span::before,
-  .footer__link-span::after {
+  .footer__link::before,
+  .footer__link::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -76,29 +95,29 @@
     left: 0;
     pointer-events: none;
   }
-  .text-section__wrapper .footer__link-span::before, .text-section__wrapper .footer__link-span::after{
-      background: var(--sub-text-color);
+  .text-section__wrapper .footer__link::before, .text-section__wrapper .footer__link::after{
+      background: var(--main-text-color);
   }
 
-  .footer__link-span.footer__link-span-no::before {
+  .footer__link.footer__link-no::before {
       display: none;
   }
-  .footer__link-span.footer__link-span-no::after {
+  .footer__link.footer__link-no::after {
     display: none;
 }
-  .footer__link-span::before {
+  .footer__link::before {
     transform-origin: 100% 50%;
     transform: scale3d(0, 1, 1);
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
   }
 
-  .footer__link-span:hover::before {
+  .footer__link:hover::before {
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
   }
 
-  .footer__link-span::after {
+  .footer__link::after {
     content: '';
     top: calc(100% + .4rem);
     transform-origin: 0% 50%;
@@ -106,11 +125,15 @@
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
   }
 
-  .footer__link-span:hover::after {
+  .footer__link:hover::after {
     transform-origin: 100% 50%;
     transform: scale3d(1, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
   }
+
+
+
+
 
   /* LOGO ON HOVER */
 
