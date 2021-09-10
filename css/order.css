@@ -11,7 +11,7 @@
     padding: 0 2rem;
 }
 .orders__btn svg {
-    fill: var(--first-brand-color);
+    fill: var(--main-bg-color);
     width: 1.5rem;
     margin-right: 2rem;
     transition: all 0.3s ease-in-out;
@@ -79,6 +79,7 @@
     background: none;
     padding: 1rem;
     font-size: 1.8rem;
+    border-bottom: .3rem solid var(--first-brand-color);
 }
 .form__card-box {
     margin-bottom: 2rem;
@@ -144,7 +145,7 @@
     visibility: hidden;
 }
 .checkbox-input:checked+.checkbox-label::before {
-   
+   background-color: var(--first-brand-color);
 }
 .checkbox-label::before {
     display: block;
@@ -153,7 +154,7 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border: .3rem solid var(--main-bg-color);
+    border: .3rem solid var(--sub-bg-color);
     left: 0;
     top: .5rem;
     /* -webkit-box-shadow: 0rem 0rem 0rem .15rem var(--third-brand-color);
@@ -191,5 +192,7 @@
     .checkbox-label {
         width: 100%;
     }
-
+    .orders__btn:hover svg {
+        fill: var(--first-brand-color);
+    }
 }
